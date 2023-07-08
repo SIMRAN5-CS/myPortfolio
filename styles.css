@@ -1,0 +1,523 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif
+}
+
+/* new code to be inserted */
+
+
+
+.firstsection {
+  display: flex;
+  position:relative; 
+}
+.left {
+  height: 90vh;
+  width: 60%;
+  background-color: #8dcbe6;
+  z-index: 0.1;
+  position:relative;
+}
+.bluezigzag{
+  position: absolute;
+  top:25%;
+  left:42%;
+  transform: rotate(180deg);
+}
+.bluecornerdot1{
+  position: absolute;
+  left: 0%;
+  bottom:0%;
+  z-index: 1;;
+}
+.bluecornerdot2{
+  position: absolute;
+  left: 0%;
+  top:40%;
+  z-index:0.71;
+}
+
+.right {
+  height: 90vh;
+  width: 40%;
+  background-color: #C0EEDF;
+  z-index: 0.1;
+  position: relative;
+}
+.myimage {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  height: 40%;
+  width: 40%;
+  max-width: 300px;
+  min-width: 175px;
+  max-height: 250px;
+  border: 4px solid white;
+  z-index: 1;
+}
+
+.border {
+  position: absolute;
+  top: 25%;
+  left: 43%;
+  min-height: 170px;
+  height: 40%;
+  max-height: 250px;
+  width: 40%;
+  min-width: 175px;
+  max-width: 300px;
+
+  z-index: 1;
+  border: 2px white solid;
+}
+
+
+.zigzagimg1{
+  position: absolute;
+  top:15%;
+  left:60%;
+  transform: rotate(120deg);
+  /* width:60px; */
+  height: 60px;
+
+}
+.zigzagimg2{
+  position: absolute;
+  bottom:5%;
+  left:70%;
+  transform: rotate(120deg);
+  /* width:60px; */
+  height: 60px;
+  
+}
+.sidedot{
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  gap:3px;
+  right:0%;
+  top:40%;
+
+}
+.cornerdot{ 
+  z-index: 1;
+  display: flex;
+  position: absolute;
+  bottom: 0%;
+  left:0%;
+  gap:4px;
+}
+
+
+
+
+.intro {
+  position: absolute;
+  color: white;
+  height: auto;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: justify;
+  top: 76%;
+  z-index: 1;
+  margin-left: 3%;
+  line-height: 3.6rem;
+}
+
+@media (min-width: 370px) {
+  .intro {
+    top: 65%;
+    width: 205px;
+  }
+}
+
+@media (min-width: 500px) {
+  .intro {
+    left: 25%;
+    font-size: 3rem;
+  }
+}
+
+
+
+.dropdown{
+  z-index: 1;
+  position: absolute;
+  top:5%;
+  /* transform: rotate(90deg); */
+  height: fit-content;
+  width: fit-content;
+  animation: dropani 0.6s 0s linear 1 forwards;
+
+}
+
+
+@keyframes dropani {
+0% {
+right: 0%;
+transform: rotate(90deg);
+}
+25% {
+right: 20%;
+}
+50% {
+right: 40%;
+}
+75% {
+right: 60%;
+}
+
+100% {
+right: 85%;
+transform: rotate(0deg);
+}
+}
+.dropdown .dropbtn {
+border: none;
+outline: none;
+padding: 2%;
+cursor: pointer;
+animation: colorani 0.6s 0s linear 1 forwards;
+}
+@keyframes colorani {
+0% {
+background-color:#C0EEDF;
+}
+69% {
+background-color: #C0EEDF;
+}
+70% {
+background-color: #8dcbe6;
+}
+100% {
+background-color: #8dcbe6;
+}
+}
+
+.baricon {
+color:white;
+font-weight: 100;
+}
+.dropdown-content {
+position: absolute;
+/* left: -75%; */
+width:min-content;
+top: 5%;
+display: none;
+background-color:#C0EEDF;
+z-index: 1;
+font-size: 1.3rem;
+font-family: "Poppins", sans-serif;
+}
+
+.dropdown-content a {
+color: #000000;
+padding: 15px 18px;
+text-decoration: none;
+display: block;
+}
+.dropdown-content a:hover {
+background-color: white;
+border-radius: 14px;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+
+
+
+
+.about {
+  background-color: #dde7f1;
+  padding-bottom: 5px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+
+}
+.about-heading h2 {
+  font-family: "Mukta", sans-serif;
+  text-align: center;
+  font-weight: 450;
+  font-size: 1.5rem;
+  color:#2c3539;
+}
+
+.about-content{
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+ }
+@media (max-width:750px){
+ 
+ .about-content {
+  display: flex;
+  flex-direction: column;
+}
+.about .two {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: 45%;
+}
+
+}
+
+@media (min-width:750px){
+  .about-heading{
+    position: absolute;
+    top:50%;
+    left:70%;
+    z-index:1;
+  }
+
+ 
+ }
+
+
+.one img {
+  height: 35px;
+  width: 35px;
+}
+
+.about h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 900;
+  /* letter-spacing: -0.03em; */
+  color: #1e059f;
+  width: 200px;
+}
+.name {
+  text-align: center;
+  margin: 0px auto 5px;
+}
+#element {
+  color: #2c3539;
+  font-family: "Mukta", sans-serif;
+  font-size: 2.5rem;
+}
+
+.skill {
+  background-color: #9ac5f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillheading {
+  margin-top: 10px;
+  background-color: #9ac5f4;
+  font-family: "Mukta", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.container {
+  width: 50%;
+  margin: 10px auto;
+  background-color: #c0eee4;
+  padding: 10px 20px;
+  border-radius: 7px;
+}
+.container .skill-box {
+  width: 100%;
+  margin: 25px 0;
+}
+.skill-box .title {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  color: blue;
+}
+.skill-box .skill-bar {
+  margin-top: 6px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 6px;
+}
+.skill-bar .skill-per {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 90%;
+  background: blue;
+  border-radius: 6px;
+  animation: progress 0.4s ease-in-out forwards;
+  opacity: 0;
+}
+.skill-per.css {
+  width: 80%;
+}
+.skill-per.javascript {
+  width: 70%;
+}
+.skill-per.c {
+  width: 80%;
+}
+.skill-per.java {
+  width: 70%;
+}
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.skill-per .tooltip {
+  position: absolute;
+  right: -14px;
+  top: -28px;
+  font-size: 13px;
+  color: white;
+  font-weight: 500;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: blue;
+  z-index: 1;
+}
+.tooltip::before {
+  left: 50%;
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  height: 10px;
+  width: 10px;
+  background-color: blue;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -1;
+}
+.contactme {
+  display: flex;
+  /* justify-content: center;  */
+  align-items: center;
+  flex-direction: column;
+}
+
+.inner-content {
+  width: 50%;
+  margin: 20px auto;
+}
+
+.inner-content h1 {
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1;
+}
+.inner-content p {
+  margin: 0 auto;
+  font-size: 1.2em;
+  line-height: 1.2;
+  margin-top: 15px;
+  letter-spacing: 0.02em;
+  transition: transform 0.5s, opacity 0.2s;
+}
+.inner-content span {
+  font-weight: bold;
+}
+
+.contact-form {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #8dcbe6;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input[type="text"],
+.contact-form textarea {
+  width: 100%;
+  /* padding: 12px;
+  border: none;
+  border-bottom: 2px solid ; */
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  font-size: 16px;
+
+  border: 0;
+  padding: 0.6em;
+
+  color: currentColor;
+  background: transparent;
+  border-bottom: 1px solid currentColor;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  height: 44px;
+  overflow: hidden;
+}
+
+.contact-form button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #43919b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+  color: blue;
+  background-color: #c0eee4;
+  transition: 1s;
+  transform: scale(1.1);
+}
+
+.links h3 {
+  margin: 15px auto 20px;
+  color: white;
+  font-size: 1.9em;
+  font-weight: 650;
+  line-height: 1;
+}
+
+footer {
+  margin-top: 15px;
+  background-color: #43919b;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.social-media-icon {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.social-media-icon:hover {
+  color: #00aced;
+  transform: scale(1.5);
+}
